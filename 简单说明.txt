@@ -1,0 +1,28 @@
+1. 本接口兼容 2.0 以上版本的 opencart 商城。
+
+
+2. 将 admin、catalog 目录请直接复制到您网站对应的目录。
+
+
+3. 通过 opencart 后台启用 gofpay，并配置相关选项。
+
+
+4. 后台配置Mode推荐使用Api的模式
+
+
+5. 支付网关地址gateway url:  https://cashier.gofpay.com
+
+
+6. 日志保存在 system/storage/logs 目录中以 gofpay-log 开头，每天会产生一个日志文件。
+
+
+7. 通知地址格式notifyurl:    http://www.域名/index.php?route=payment/gofpay/callback
+   返回地址格式returnurl:    http://www.域名/index.php?route=checkout/return_gof
+
+
+8. 测试时卡号：4111111111111111
+   过期日期  ：大于当前日期
+   cvv2      :111
+   当网站提示 ："Very Sorry. Your issuing bank or credit card company said 'Invalid account number'.Please try to contact with your issuing bank or use a different card and try again."
+   且商户后台有这笔待支付的订单时，说明接口安装成功了
+   
